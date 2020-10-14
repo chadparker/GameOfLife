@@ -11,8 +11,8 @@
 		632F7EA22536976C00E86DD0 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632F7EA12536976C00E86DD0 /* Tests_macOS.swift */; };
 		632F7EA42536976C00E86DD0 /* GameOfLifeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632F7E7B2536976A00E86DD0 /* GameOfLifeApp.swift */; };
 		632F7EA52536976C00E86DD0 /* GameOfLifeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632F7E7B2536976A00E86DD0 /* GameOfLifeApp.swift */; };
-		632F7EA62536976C00E86DD0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632F7E7C2536976A00E86DD0 /* ContentView.swift */; };
-		632F7EA72536976C00E86DD0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632F7E7C2536976A00E86DD0 /* ContentView.swift */; };
+		632F7EA62536976C00E86DD0 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632F7E7C2536976A00E86DD0 /* MainView.swift */; };
+		632F7EA72536976C00E86DD0 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632F7E7C2536976A00E86DD0 /* MainView.swift */; };
 		632F7EA82536976C00E86DD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 632F7E7D2536976C00E86DD0 /* Assets.xcassets */; };
 		632F7EA92536976C00E86DD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 632F7E7D2536976C00E86DD0 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -36,7 +36,7 @@
 
 /* Begin PBXFileReference section */
 		632F7E7B2536976A00E86DD0 /* GameOfLifeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOfLifeApp.swift; sourceTree = "<group>"; };
-		632F7E7C2536976A00E86DD0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		632F7E7C2536976A00E86DD0 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		632F7E7D2536976C00E86DD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		632F7E822536976C00E86DD0 /* GameOfLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameOfLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		632F7E852536976C00E86DD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -308,7 +308,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				632F7EA62536976C00E86DD0 /* ContentView.swift in Sources */,
+				632F7EA62536976C00E86DD0 /* MainView.swift in Sources */,
 				632F7EA42536976C00E86DD0 /* GameOfLifeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,7 +317,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				632F7EA72536976C00E86DD0 /* ContentView.swift in Sources */,
+				632F7EA72536976C00E86DD0 /* MainView.swift in Sources */,
 				632F7EA52536976C00E86DD0 /* GameOfLifeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

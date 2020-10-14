@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  MainView.swift
 //  Shared
 //
 //  Created by Chad Parker on 10/13/20.
@@ -7,15 +7,19 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct MainView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            Image("header")
+            Text("Hello, world!")
+                .padding()
+            Spacer()
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        MainView()
     }
 }
