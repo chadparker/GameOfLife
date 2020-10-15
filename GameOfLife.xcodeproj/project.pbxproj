@@ -17,8 +17,10 @@
 		632F7EA92536976C00E86DD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 632F7E7D2536976C00E86DD0 /* Assets.xcassets */; };
 		63B9AF2D25369EF000435054 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B9AF2C25369EF000435054 /* Cell.swift */; };
 		63B9AF2E25369EF000435054 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B9AF2C25369EF000435054 /* Cell.swift */; };
-		63B9AF3425369EFB00435054 /* CellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B9AF3325369EFB00435054 /* CellViewModel.swift */; };
-		63B9AF3525369EFB00435054 /* CellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B9AF3325369EFB00435054 /* CellViewModel.swift */; };
+		63DA9B692537FB1D00A72E2B /* CellGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DA9B682537FB1D00A72E2B /* CellGrid.swift */; };
+		63DA9B6A2537FB1D00A72E2B /* CellGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DA9B682537FB1D00A72E2B /* CellGrid.swift */; };
+		63DA9B702537FB7700A72E2B /* GameOfLifeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DA9B6F2537FB7700A72E2B /* GameOfLifeModel.swift */; };
+		63DA9B712537FB7700A72E2B /* GameOfLifeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DA9B6F2537FB7700A72E2B /* GameOfLifeModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,8 +56,9 @@
 		632F7EA12536976C00E86DD0 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		632F7EA32536976C00E86DD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63B9AF2C25369EF000435054 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
-		63B9AF3325369EFB00435054 /* CellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewModel.swift; sourceTree = "<group>"; };
 		63B9AF3A2536A0EE00435054 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		63DA9B682537FB1D00A72E2B /* CellGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellGrid.swift; sourceTree = "<group>"; };
+		63DA9B6F2537FB7700A72E2B /* GameOfLifeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOfLifeModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,8 +110,8 @@
 			children = (
 				63B9AF3A2536A0EE00435054 /* README.md */,
 				632F7E7B2536976A00E86DD0 /* GameOfLifeApp.swift */,
+				63B9AF442536A93400435054 /* Model */,
 				63B9AF3B2536A91100435054 /* Views */,
-				63B9AF442536A93400435054 /* View Models */,
 				632F7E7D2536976C00E86DD0 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -164,17 +167,18 @@
 			isa = PBXGroup;
 			children = (
 				632F7E7C2536976A00E86DD0 /* MainView.swift */,
+				63DA9B682537FB1D00A72E2B /* CellGrid.swift */,
 				63B9AF2C25369EF000435054 /* Cell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		63B9AF442536A93400435054 /* View Models */ = {
+		63B9AF442536A93400435054 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				63B9AF3325369EFB00435054 /* CellViewModel.swift */,
+				63DA9B6F2537FB7700A72E2B /* GameOfLifeModel.swift */,
 			);
-			path = "View Models";
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,9 +338,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63DA9B702537FB7700A72E2B /* GameOfLifeModel.swift in Sources */,
 				632F7EA62536976C00E86DD0 /* MainView.swift in Sources */,
 				632F7EA42536976C00E86DD0 /* GameOfLifeApp.swift in Sources */,
-				63B9AF3425369EFB00435054 /* CellViewModel.swift in Sources */,
+				63DA9B692537FB1D00A72E2B /* CellGrid.swift in Sources */,
 				63B9AF2D25369EF000435054 /* Cell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,9 +350,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63DA9B712537FB7700A72E2B /* GameOfLifeModel.swift in Sources */,
 				632F7EA72536976C00E86DD0 /* MainView.swift in Sources */,
 				632F7EA52536976C00E86DD0 /* GameOfLifeApp.swift in Sources */,
-				63B9AF3525369EFB00435054 /* CellViewModel.swift in Sources */,
+				63DA9B6A2537FB1D00A72E2B /* CellGrid.swift in Sources */,
 				63B9AF2E25369EF000435054 /* Cell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
