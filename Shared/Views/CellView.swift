@@ -9,21 +9,22 @@ import SwiftUI
 
 struct CellView: View {
 
+    @ObservedObject var cell: Cell
+
     var size: CGFloat = 30
-    @State var alive: Bool = false
 
     var body: some View {
         ZStack {
             Image(systemName: "xmark")
-                .font(Font.system(size: size/2.0, weight: .black))
+                .font(Font.system(size: size/2, weight: .black))
                 .foregroundColor(Color("dead"))
 
             Button(action: {
-                alive.toggle()
+                cell.alive.toggle()
             }, label: {
                 Square(cornerRadius: size/6)
                     .foregroundColor(Color("alive"))
-                    .opacity(alive ? 1 : 0)
+                    .opacity(cell.alive ? 1 : 0)
                     .frame(width: size, height: size)
             })
         }
@@ -33,8 +34,8 @@ struct CellView: View {
 struct Cell_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
-            CellView(alive: false)
-            CellView(alive: true)
+            CellView(cell: Cell())
+            CellView(cell: Cell(alive: true))
         }
     }
 }
