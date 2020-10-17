@@ -12,6 +12,7 @@ struct GameOfLifeApp: App {
     var body: some Scene {
         WindowGroup {
             MainView()
+                .environmentObject(GameOfLifeModel())
         }
     }
 }
