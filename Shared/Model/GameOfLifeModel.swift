@@ -35,6 +35,15 @@ class Row: Identifiable {
 
 class GameOfLifeModel: ObservableObject {
 
-    var rows: Int
-    var cols: Int
+    @Published var rows: [Row] = []
+
+    var speed: Double
+
+    init(numRows: Int = 9, numCols: Int = 9, speed: Double = 0.5) {
+        self.speed = speed
+
+        for _ in 0..<numRows {
+            rows.append(Row(cellCount: numCols))
+        }
+    }
 }
