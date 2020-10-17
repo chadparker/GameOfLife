@@ -14,15 +14,20 @@ struct Square: Shape {
 
     func path(in rect: CGRect) -> Path {
         let smallDimension = min(rect.width, rect.height)
-                            // center it
-        let square = CGRect(x: rect.origin.x + rect.width / 2 - smallDimension / 2,
-                            y: rect.origin.y + rect.height / 2 - smallDimension / 2,
-                            width: smallDimension,
-                            height: smallDimension)
+        let square = CGRect(
+            // center it
+            x: rect.origin.x + rect.width / 2 - smallDimension / 2,
+            y: rect.origin.y + rect.height / 2 - smallDimension / 2,
+            // make a square
+            width: smallDimension,
+            height: smallDimension
+        )
         var path = Path()
-        path.addRoundedRect(in: square,
-                            cornerSize: CGSize(width: cornerRadius, height: cornerRadius),
-                            style: .continuous)
+        path.addRoundedRect(
+            in: square,
+            cornerSize: CGSize(width: cornerRadius, height: cornerRadius),
+            style: .continuous
+        )
         return path
     }
 }
