@@ -45,5 +45,15 @@ class GameOfLifeModel: ObservableObject {
         for _ in 0..<numRows {
             rows.append(Row(cellCount: numCols))
         }
+
+        randomize()
+    }
+
+    func randomize() {
+        for row in rows {
+            for cell in row.cells {
+                cell.alive = Bool.random()
+            }
+        }
     }
 }
