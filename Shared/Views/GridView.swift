@@ -1,5 +1,5 @@
 //
-//  CellGrid.swift
+//  GridView.swift
 //  GameOfLife
 //
 //  Created by Chad Parker on 10/14/20.
@@ -7,8 +7,7 @@
 
 import SwiftUI
 
-// TODO: rename to GridView
-struct CellGrid: View {
+struct GridView: View {
 
     @EnvironmentObject var gameModel: GameOfLifeModel
 
@@ -27,7 +26,7 @@ struct CellGrid: View {
 
 struct Grid_Previews: PreviewProvider {
     static var previews: some View {
-        CellGrid()
+        GridView()
             .environmentObject(GameOfLifeModel())
     }
 }

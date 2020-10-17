@@ -19,8 +19,8 @@
 		63B9AF2E25369EF000435054 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B9AF2C25369EF000435054 /* CellView.swift */; };
 		63C8B2392539457500441B82 /* Square.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C8B2382539457500441B82 /* Square.swift */; };
 		63C8B23A2539457500441B82 /* Square.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C8B2382539457500441B82 /* Square.swift */; };
-		63DA9B692537FB1D00A72E2B /* CellGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DA9B682537FB1D00A72E2B /* CellGrid.swift */; };
-		63DA9B6A2537FB1D00A72E2B /* CellGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DA9B682537FB1D00A72E2B /* CellGrid.swift */; };
+		63DA9B692537FB1D00A72E2B /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DA9B682537FB1D00A72E2B /* GridView.swift */; };
+		63DA9B6A2537FB1D00A72E2B /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DA9B682537FB1D00A72E2B /* GridView.swift */; };
 		63DA9B702537FB7700A72E2B /* GameOfLifeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DA9B6F2537FB7700A72E2B /* GameOfLifeModel.swift */; };
 		63DA9B712537FB7700A72E2B /* GameOfLifeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DA9B6F2537FB7700A72E2B /* GameOfLifeModel.swift */; };
 /* End PBXBuildFile section */
@@ -60,7 +60,7 @@
 		63B9AF2C25369EF000435054 /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
 		63B9AF3A2536A0EE00435054 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		63C8B2382539457500441B82 /* Square.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Square.swift; sourceTree = "<group>"; };
-		63DA9B682537FB1D00A72E2B /* CellGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellGrid.swift; sourceTree = "<group>"; };
+		63DA9B682537FB1D00A72E2B /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 		63DA9B6F2537FB7700A72E2B /* GameOfLifeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOfLifeModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -171,7 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				632F7E7C2536976A00E86DD0 /* MainView.swift */,
-				63DA9B682537FB1D00A72E2B /* CellGrid.swift */,
+				63DA9B682537FB1D00A72E2B /* GridView.swift */,
 				63B9AF2C25369EF000435054 /* CellView.swift */,
 			);
 			path = Views;
@@ -354,7 +354,7 @@
 				63DA9B702537FB7700A72E2B /* GameOfLifeModel.swift in Sources */,
 				632F7EA62536976C00E86DD0 /* MainView.swift in Sources */,
 				632F7EA42536976C00E86DD0 /* GameOfLifeApp.swift in Sources */,
-				63DA9B692537FB1D00A72E2B /* CellGrid.swift in Sources */,
+				63DA9B692537FB1D00A72E2B /* GridView.swift in Sources */,
 				63B9AF2D25369EF000435054 /* CellView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,7 +367,7 @@
 				63DA9B712537FB7700A72E2B /* GameOfLifeModel.swift in Sources */,
 				632F7EA72536976C00E86DD0 /* MainView.swift in Sources */,
 				632F7EA52536976C00E86DD0 /* GameOfLifeApp.swift in Sources */,
-				63DA9B6A2537FB1D00A72E2B /* CellGrid.swift in Sources */,
+				63DA9B6A2537FB1D00A72E2B /* GridView.swift in Sources */,
 				63B9AF2E25369EF000435054 /* CellView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

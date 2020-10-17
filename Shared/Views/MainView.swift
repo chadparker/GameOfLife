@@ -12,7 +12,7 @@ struct MainView: View {
         VStack {
             Image("header")
                 .padding(.vertical, 50)
-            CellGrid()
+            GridView()
             Spacer()
         }
     }
