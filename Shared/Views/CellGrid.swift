@@ -7,37 +7,27 @@
 
 import SwiftUI
 
+// TODO: rename to GridView
 struct CellGrid: View {
 
-    let spacing: CGFloat = 2
-
-    @ObservedObject var gameModel = GameOfLifeModel()
-
-    let data = (1...25).map { "\($0)" }
-    var columns = [GridItem]()
-
-    init() {
-        columns = [GridItem(.fixed(30), spacing: spacing),
-                   GridItem(.fixed(30), spacing: spacing),
-                   GridItem(.fixed(30), spacing: spacing),
-                   GridItem(.fixed(30), spacing: spacing),
-                   GridItem(.fixed(30), spacing: spacing),]
-    }
+    @EnvironmentObject var gameModel: GameOfLifeModel
 
     var body: some View {
-        LazyVGrid(columns: columns, spacing: spacing) {
-            ForEach(data, id: \.self) { item in
-                Cell(size: 30, alive: true)
+        VStack {
+            ForEach(gameModel.rows) { row in
+                HStack {
+                    ForEach(row.cells) { cell in
+                        CellView(cell: cell)
+                    }
+                }
             }
         }
     }
 }
 
-
-
-
 struct Grid_Previews: PreviewProvider {
     static var previews: some View {
         CellGrid()
+            .environmentObject(GameOfLifeModel())
     }
 }
