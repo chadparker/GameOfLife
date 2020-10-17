@@ -1,5 +1,5 @@
 //
-//  Cell.swift
+//  CellView.swift
 //  GameOfLife
 //
 //  Created by Chad Parker on 10/13/20.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Cell: View {
+struct CellView: View {
 
     var size: CGFloat = 30
     @State var alive: Bool = false
@@ -33,8 +33,8 @@ struct Cell: View {
 struct Cell_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
-            Cell(alive: false)
-            Cell(alive: true)
+            CellView(alive: false)
+            CellView(alive: true)
         }
     }
 }
