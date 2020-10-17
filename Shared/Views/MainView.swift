@@ -11,8 +11,8 @@ struct MainView: View {
     var body: some View {
         VStack {
             Image("header")
-            Text("Hello, world!")
-                .padding()
+                .padding(.vertical, 50)
+            CellGrid()
             Spacer()
         }
     }
