@@ -8,18 +8,35 @@
 import SwiftUI
 
 struct MainView: View {
+    
+    @EnvironmentObject var gameModel: GameOfLifeModel
+    
     var body: some View {
-        VStack {
-            Image("header")
-                .padding(.vertical, 50)
-            GridView()
-            Spacer()
+        GeometryReader { g in
+            VStack {
+                Image("header")
+                    .padding(.vertical, g.size.height/30)
+                GridView()
+                Button {
+                    gameModel.randomize()
+                } label: {
+                    Text("RANDOMIZE")
+                        .font(.callout)
+                        .fontWeight(.heavy)
+                        .padding(.top)
+                }
+                Spacer()
+            }
+            .frame(minWidth: 0, maxWidth: .infinity)
         }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView()
+        Group {
+            MainView()
+                .environmentObject(GameOfLifeModel())
+        }
     }
 }
