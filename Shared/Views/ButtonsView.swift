@@ -21,6 +21,7 @@ struct ButtonsView: View {
                     Text("START")
                         .font(.callout)
                         .fontWeight(.heavy)
+                        .foregroundColor(gameModel.running ? Color(.systemGray4) : Color(.link))
                         .padding()
                 }
 
@@ -30,6 +31,7 @@ struct ButtonsView: View {
                     Text("STOP")
                         .font(.callout)
                         .fontWeight(.heavy)
+                        .foregroundColor(gameModel.running ? .accentColor : Color(.systemGray4))
                         .padding()
                 }
             }
