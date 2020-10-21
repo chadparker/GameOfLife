@@ -23,7 +23,7 @@ struct CellView: View {
                 cell.alive.toggle()
             }, label: {
                 Square(cornerRadius: size/6)
-                    .foregroundColor(Color("alive"))
+                    .foregroundColor(.accentColor)
                     .opacity(cell.alive ? 1 : 0)
                     .frame(width: size, height: size)
             })
@@ -33,7 +33,7 @@ struct CellView: View {
 
 struct Cell_Previews: PreviewProvider {
     static var previews: some View {
-        VStack {
+        HStack {
             CellView(cell: Cell())
             CellView(cell: Cell(alive: true))
         }
