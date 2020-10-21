@@ -18,6 +18,7 @@ struct MainView: View {
                     .padding(.vertical, g.size.height/30)
                 GridView()
                 ButtonsView()
+                Text("Generation: \(gameModel.generation)")
                 Spacer()
             }
             .frame(minWidth: 0, maxWidth: .infinity)
