@@ -17,14 +17,7 @@ struct MainView: View {
                 Image("header")
                     .padding(.vertical, g.size.height/30)
                 GridView()
-                Button {
-                    gameModel.randomize()
-                } label: {
-                    Text("RANDOMIZE")
-                        .font(.callout)
-                        .fontWeight(.heavy)
-                        .padding(.top)
-                }
+                ButtonsView()
                 Spacer()
             }
             .frame(minWidth: 0, maxWidth: .infinity)
@@ -38,5 +31,32 @@ struct ContentView_Previews: PreviewProvider {
             MainView()
                 .environmentObject(GameOfLifeModel())
         }
+    }
+}
+
+struct ButtonsView: View {
+
+    @EnvironmentObject var gameModel: GameOfLifeModel
+
+    var body: some View {
+        HStack {
+
+            Button {
+                gameModel.randomizeBoard()
+            } label: {
+                Text("RANDOMIZE")
+                    .font(.callout)
+                    .fontWeight(.heavy)
+            }
+
+            Button {
+                gameModel.clearBoard()
+            } label: {
+                Text("CLEAR")
+                    .font(.callout)
+                    .fontWeight(.heavy)
+            }
+        }
+        .padding(.top)
     }
 }
