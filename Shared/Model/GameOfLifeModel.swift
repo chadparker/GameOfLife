@@ -46,10 +46,18 @@ class GameOfLifeModel: ObservableObject {
             rows.append(Row(cellCount: numCols))
         }
 
-        randomize()
+        randomizeBoard()
     }
 
-    func randomize() {
+    func clearBoard() {
+        for row in rows {
+            for cell in row.cells {
+                cell.alive = false
+            }
+        }
+    }
+
+    func randomizeBoard() {
         for row in rows {
             for cell in row.cells {
                 cell.alive = Bool.random()
