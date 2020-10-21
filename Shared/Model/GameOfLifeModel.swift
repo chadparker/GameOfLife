@@ -37,6 +37,7 @@ class GameOfLifeModel: ObservableObject {
 
     @Published var rows: [Row] = []
 
+    var timer: Timer?
     var speed: Double
 
     init(numRows: Int = 9, numCols: Int = 9, speed: Double = 0.5) {
@@ -63,5 +64,18 @@ class GameOfLifeModel: ObservableObject {
                 cell.alive = Bool.random()
             }
         }
+    }
+
+    func startSimulation() {
+        timer?.invalidate()
+        timer = Timer.scheduledTimer(withTimeInterval: speed, repeats: true, block: runLoop)
+    }
+
+    func stopSimulation() {
+        timer?.invalidate()
+    }
+
+    func runLoop(timer: Timer) {
+        print(Int.random(in: 0...99))
     }
 }
