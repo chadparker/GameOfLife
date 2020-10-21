@@ -33,30 +33,3 @@ struct ContentView_Previews: PreviewProvider {
         }
     }
 }
-
-struct ButtonsView: View {
-
-    @EnvironmentObject var gameModel: GameOfLifeModel
-
-    var body: some View {
-        HStack {
-
-            Button {
-                gameModel.randomizeBoard()
-            } label: {
-                Text("RANDOMIZE")
-                    .font(.callout)
-                    .fontWeight(.heavy)
-            }
-
-            Button {
-                gameModel.clearBoard()
-            } label: {
-                Text("CLEAR")
-                    .font(.callout)
-                    .fontWeight(.heavy)
-            }
-        }
-        .padding(.top)
-    }
-}
