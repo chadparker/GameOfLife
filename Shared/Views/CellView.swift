@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CellView: View {
 
+    @EnvironmentObject var gameModel: GameOfLifeModel
     @ObservedObject var cell: Cell
 
     var size: CGFloat = 30
@@ -20,13 +21,15 @@ struct CellView: View {
                 .foregroundColor(Color("dead"))
 
             Button(action: {
-                cell.alive.toggle()
+                if !gameModel.running {
+                    cell.alive.toggle()
+                }
             }, label: {
                 Square(cornerRadius: size/6)
                     .foregroundColor(.accentColor)
                     .opacity(cell.alive ? 1 : 0)
                     .frame(width: size, height: size)
-            })
+            })//.disabled(gameModel.running) // makes button gray. how to customize?
         }
     }
 }
