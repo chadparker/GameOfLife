@@ -36,6 +36,8 @@ class Row: Identifiable {
 class GameOfLifeModel: ObservableObject {
 
     @Published var rows: [Row] = []
+    @Published var running = false
+    @Published var generation = 0
 
     var timer: Timer?
     var speed: Double
@@ -69,13 +71,16 @@ class GameOfLifeModel: ObservableObject {
     func startSimulation() {
         timer?.invalidate()
         timer = Timer.scheduledTimer(withTimeInterval: speed, repeats: true, block: runLoop)
+        running = true
     }
 
     func stopSimulation() {
         timer?.invalidate()
+        running = false
     }
 
     func runLoop(timer: Timer) {
-        print(Int.random(in: 0...99))
+        generation += 1
+        print(generation)
     }
 }
