@@ -39,7 +39,7 @@ struct ButtonsView: View {
             HStack {
 
                 Button {
-                    gameModel.randomizeBoard()
+                    gameModel.board.randomize()
                 } label: {
                     Text("RANDOMIZE")
                         .font(.callout)
@@ -48,7 +48,7 @@ struct ButtonsView: View {
                 }
 
                 Button {
-                    gameModel.clearBoard()
+                    gameModel.board.clear()
                 } label: {
                     Text("CLEAR")
                         .font(.callout)

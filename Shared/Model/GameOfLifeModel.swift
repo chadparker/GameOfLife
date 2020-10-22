@@ -45,6 +45,14 @@ class GameBoard {
             rows.append(row)
         }
     }
+
+    func clear() {
+        cells.forEach { $0.alive = false }
+    }
+
+    func randomize() {
+        cells.forEach { $0.alive = Bool.random() }
+    }
 }
 
 
@@ -63,15 +71,7 @@ class GameOfLifeModel: ObservableObject {
         self.board = GameBoard(numRows: numRows, numCols: numCols)
         self.speed = speed
 
-        randomizeBoard()
-    }
-
-    func clearBoard() {
-        board.cells.forEach { $0.alive = false }
-    }
-
-    func randomizeBoard() {
-        board.cells.forEach { $0.alive = Bool.random() }
+        board.randomize()
     }
 
     func startSimulation() {
