@@ -67,19 +67,11 @@ class GameOfLifeModel: ObservableObject {
     }
 
     func clearBoard() {
-        for row in rows {
-            for cell in row.cells {
-                cell.alive = false
-            }
-        }
+        board.cells.forEach { $0.alive = false }
     }
 
     func randomizeBoard() {
-        for row in rows {
-            for cell in row.cells {
-                cell.alive = Bool.random()
-            }
-        }
+        board.cells.forEach { $0.alive = Bool.random() }
     }
 
     func startSimulation() {
