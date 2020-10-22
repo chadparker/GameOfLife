@@ -10,6 +10,7 @@ import SwiftUI
 // MARK: - Cell
 
 class Cell: Identifiable, ObservableObject {
+
     @Published var alive: Bool
 
     init(alive: Bool = false) {
@@ -21,11 +22,27 @@ class Cell: Identifiable, ObservableObject {
 // MARK: - Row
 
 class Row: Identifiable {
-    var cells: [Cell] = []
 
-    init(cellCount: Int) {
-        for _ in 0..<cellCount {
-            cells.append(Cell())
+    var cells: [Cell] = []
+}
+
+
+// MARK: - Game Board
+
+class GameBoard {
+
+    var cells: [Cell] = []
+    var rows: [Row] = []
+
+    init(numRows: Int = 9, numCols: Int = 9) {
+        for _ in 0..<numRows {
+            let row = Row()
+            for _ in 0..<numCols {
+                let cell = Cell()
+                cells.append(cell) // linear list of cells
+                row.cells.append(cell) // rows of cells
+            }
+            rows.append(row)
         }
     }
 }
@@ -35,7 +52,7 @@ class Row: Identifiable {
 
 class GameOfLifeModel: ObservableObject {
 
-    @Published var rows: [Row] = []
+    @Published var board: GameBoard
     @Published var running = false
     @Published var generation = 0
 
@@ -43,11 +60,8 @@ class GameOfLifeModel: ObservableObject {
     var speed: Double
 
     init(numRows: Int = 9, numCols: Int = 9, speed: Double = 0.5) {
+        self.board = GameBoard(numRows: numRows, numCols: numCols)
         self.speed = speed
-
-        for _ in 0..<numRows {
-            rows.append(Row(cellCount: numCols))
-        }
 
         randomizeBoard()
     }

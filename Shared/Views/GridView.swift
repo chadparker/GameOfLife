@@ -13,7 +13,7 @@ struct GridView: View {
 
     var body: some View {
         VStack {
-            ForEach(gameModel.rows) { row in
+            ForEach(gameModel.board.rows) { row in
                 HStack {
                     ForEach(row.cells) { cell in
                         CellView(cell: cell)
