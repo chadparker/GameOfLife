@@ -67,6 +67,35 @@ class GameBoard {
         cells.forEach { $0.alive = Bool.random() }
     }
 
+    func calculateNextGeneration() {
+        var nextList: [Bool] = []
+        for cell in cells {
+            let aliveNeighborsCount = cell.neighbors.filter { $0.alive }.count
+            var nextAlive: Bool
+            if cell.alive {
+                switch aliveNeighborsCount {
+                case 0...1:
+                    nextAlive = false
+                case 2...3:
+                    nextAlive = true
+                default:
+                    nextAlive = false
+                }
+            } else {
+                if cell.neighbors.count == 3 {
+                    nextAlive = true
+                } else {
+                    nextAlive = false
+                }
+            }
+            nextList.append(nextAlive)
+        }
+        //assert(nextList.count == cells.count)
+        for i in 0..<cells.count {
+            cells[i].alive = nextList[i]
+        }
+    }
+
     private func findCellNeighbors(row: Int, col: Int) -> [Cell] {
         var neighbors: [Cell] = []
         if row > 0 {
@@ -137,6 +166,7 @@ class GameOfLifeModel: ObservableObject {
 
     func runLoop(timer: Timer) {
         generation += 1
-        print(generation)
+
+        board.calculateNextGeneration()
     }
 }
