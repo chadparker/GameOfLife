@@ -59,7 +59,15 @@ class GameBoard {
         }
     }
 
-    func findCellNeighbors(row: Int, col: Int) -> [Cell] {
+    func clear() {
+        cells.forEach { $0.alive = false }
+    }
+
+    func randomize() {
+        cells.forEach { $0.alive = Bool.random() }
+    }
+
+    private func findCellNeighbors(row: Int, col: Int) -> [Cell] {
         var neighbors: [Cell] = []
         if row > 0 {
             // add upper left
@@ -94,14 +102,6 @@ class GameBoard {
             }
         }
         return neighbors
-    }
-
-    func clear() {
-        cells.forEach { $0.alive = false }
-    }
-
-    func randomize() {
-        cells.forEach { $0.alive = Bool.random() }
     }
 }
 
