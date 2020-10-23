@@ -12,6 +12,7 @@ import SwiftUI
 class Cell: Identifiable, ObservableObject {
 
     @Published var alive: Bool
+    var neighbors: [Cell] = []
 
     init(alive: Bool = false) {
         self.alive = alive
@@ -34,7 +35,13 @@ class GameBoard {
     var cells: [Cell] = []
     var rows: [Row] = []
 
+    let numRows: Int
+    let numCols: Int
+
     init(numRows: Int = 9, numCols: Int = 9) {
+        self.numRows = numRows
+        self.numCols = numCols
+        // create cells and rows
         for _ in 0..<numRows {
             let row = Row()
             for _ in 0..<numCols {
@@ -44,6 +51,49 @@ class GameBoard {
             }
             rows.append(row)
         }
+        // assign neigbor references to each cell
+        for (rowIndex, row) in rows.enumerated() {
+            for (colIndex, cell) in row.cells.enumerated() {
+                cell.neighbors = findCellNeighbors(row: rowIndex, col: colIndex)
+            }
+        }
+    }
+
+    func findCellNeighbors(row: Int, col: Int) -> [Cell] {
+        var neighbors: [Cell] = []
+        if row > 0 {
+            // add upper left
+            if col > 0 {
+                neighbors.append(rows[row-1].cells[col-1])
+            }
+            // add upper
+            neighbors.append(rows[row-1].cells[col])
+            // add upper right
+            if col < numCols - 1 {
+                neighbors.append(rows[row-1].cells[col+1])
+            }
+        }
+        // add left
+        if col > 0 {
+            neighbors.append(rows[row].cells[col-1])
+        }
+        // add right
+        if col < numCols - 1 {
+            neighbors.append(rows[row].cells[col+1])
+        }
+        if row < numRows - 1 {
+            // add lower left
+            if col > 0 {
+                neighbors.append(rows[row+1].cells[col-1])
+            }
+            // add lower
+            neighbors.append(rows[row+1].cells[col])
+            // add lower right
+            if col < numCols - 1 {
+                neighbors.append(rows[row+1].cells[col+1])
+            }
+        }
+        return neighbors
     }
 
     func clear() {
