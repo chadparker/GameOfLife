@@ -12,7 +12,7 @@ struct CellView: View {
     @EnvironmentObject var gameModel: GameOfLifeModel
     @ObservedObject var cell: Cell
 
-    var size: CGFloat = 30
+    var size: CGFloat
 
     var body: some View {
         ZStack {
@@ -28,7 +28,7 @@ struct CellView: View {
                 Square(cornerRadius: size/6)
                     .foregroundColor(.accentColor)
                     .opacity(cell.alive ? 1 : 0)
-                    .frame(width: size, height: size)
+                    //.frame(width: size, height: size)
             })//.disabled(gameModel.running) // makes button gray. how to customize?
         }
     }
@@ -37,8 +37,8 @@ struct CellView: View {
 struct Cell_Previews: PreviewProvider {
     static var previews: some View {
         HStack {
-            CellView(cell: Cell())
-            CellView(cell: Cell(alive: true))
+            CellView(cell: Cell(), size: 30)
+            CellView(cell: Cell(alive: true), size: 30)
         }
     }
 }

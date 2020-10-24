@@ -16,7 +16,7 @@ struct MainView: View {
             VStack {
                 Image("header")
                     .padding(.vertical, g.size.height/30)
-                GridView()
+                GridView(size: g.size.width)
                 ButtonsView()
                 Text("Generation: \(gameModel.generation)")
                 Spacer()

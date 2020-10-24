@@ -11,22 +11,24 @@ struct GridView: View {
 
     @EnvironmentObject var gameModel: GameOfLifeModel
 
+    let size: CGFloat
+
     var body: some View {
         VStack {
             ForEach(gameModel.board.rows) { row in
                 HStack {
                     ForEach(row.cells) { cell in
-                        CellView(cell: cell)
+                        CellView(cell: cell, size: size/CGFloat(gameModel.board.numCols))
                     }
                 }
             }
-        }
+        }.frame(width: size, height: size)
     }
 }
 
 struct Grid_Previews: PreviewProvider {
     static var previews: some View {
-        GridView()
+        GridView(size: 350)
             .environmentObject(GameOfLifeModel())
     }
 }
