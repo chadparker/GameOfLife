@@ -119,7 +119,7 @@ class GameBoard {
                     nextAlive = false
                 }
             } else {
-                if cell.neighbors.count == 3 {
+                if aliveNeighborsCount == 3 {
                     nextAlive = true
                 } else {
                     nextAlive = false
@@ -127,7 +127,6 @@ class GameBoard {
             }
             nextList.append(nextAlive)
         }
-        //assert(nextList.count == cells.count)
         for i in 0..<cells.count {
             cells[i].alive = nextList[i]
         }
