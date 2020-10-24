@@ -169,10 +169,6 @@ class GameOfLifeModel: ObservableObject {
         board.calculateNextGeneration()
     }
     
-//    func createNewBoard(size: Int) {
-//        board = GameBoard(numRows: size, numCols: size)
-//    }
-    
     func createNewSmallerBoard() {
         let newSize = board.numCols - 1
         if newSize > 0 {
