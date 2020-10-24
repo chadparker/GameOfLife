@@ -151,9 +151,13 @@ class GameOfLifeModel: ObservableObject {
     }
 
     func startSimulation() {
+        updateTimer()
+        running = true
+    }
+
+    private func updateTimer() {
         timer?.invalidate()
         timer = Timer.scheduledTimer(withTimeInterval: speed, repeats: true, block: runLoop)
-        running = true
     }
 
     func stopSimulation() {
@@ -179,5 +183,15 @@ class GameOfLifeModel: ObservableObject {
         if newSize < 100 {
             board = GameBoard(size: newSize)
         }
+    }
+
+    func speedSlower() {
+        speed *= 1.5
+        updateTimer()
+    }
+
+    func speedFaster() {
+        speed /= 1.5
+        updateTimer()
     }
 }

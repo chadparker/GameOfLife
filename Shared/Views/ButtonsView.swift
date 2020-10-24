@@ -76,6 +76,24 @@ struct ButtonsView: View {
                         .fontWeight(.heavy)
                         .padding()
                 }
+
+                Button {
+                    gameModel.speedSlower()
+                } label: {
+                    Text("SLOWER")
+                        .font(.callout)
+                        .fontWeight(.heavy)
+                        .padding()
+                }
+                
+                Button {
+                    gameModel.speedFaster()
+                } label: {
+                    Text("FASTER")
+                        .font(.callout)
+                        .fontWeight(.heavy)
+                        .padding()
+                }
             }
         }
         .padding(.top)
