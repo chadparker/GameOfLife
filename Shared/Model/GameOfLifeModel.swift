@@ -35,16 +35,14 @@ class GameBoard {
     var cells: [Cell] = []
     var rows: [Row] = []
 
-    let numRows: Int
-    let numCols: Int
+    let size: Int
 
-    init(numRows: Int = 9, numCols: Int = 9) {
-        self.numRows = numRows
-        self.numCols = numCols
+    init(size: Int = 9) {
+        self.size = size
         // create cells and rows
-        for _ in 0..<numRows {
+        for _ in 0..<size {
             let row = Row()
-            for _ in 0..<numCols {
+            for _ in 0..<size {
                 let cell = Cell()
                 cells.append(cell) // linear list of cells
                 row.cells.append(cell) // rows of cells
@@ -69,7 +67,7 @@ class GameBoard {
             // add upper
             neighbors.append(rows[row-1].cells[col])
             // add upper right
-            if col < numCols - 1 {
+            if col < size - 1 {
                 neighbors.append(rows[row-1].cells[col+1])
             }
         }
@@ -78,10 +76,10 @@ class GameBoard {
             neighbors.append(rows[row].cells[col-1])
         }
         // add right
-        if col < numCols - 1 {
+        if col < size - 1 {
             neighbors.append(rows[row].cells[col+1])
         }
-        if row < numRows - 1 {
+        if row < size - 1 {
             // add lower left
             if col > 0 {
                 neighbors.append(rows[row+1].cells[col-1])
@@ -89,7 +87,7 @@ class GameBoard {
             // add lower
             neighbors.append(rows[row+1].cells[col])
             // add lower right
-            if col < numCols - 1 {
+            if col < size - 1 {
                 neighbors.append(rows[row+1].cells[col+1])
             }
         }
@@ -146,7 +144,7 @@ class GameOfLifeModel: ObservableObject {
     var speed: Double
 
     init(size: Int = 3, speed: Double = 0.5) {
-        self.board = GameBoard(numRows: size, numCols: size)
+        self.board = GameBoard(size: size)
         self.speed = speed
 
         board.randomize()
@@ -170,16 +168,16 @@ class GameOfLifeModel: ObservableObject {
     }
     
     func createNewSmallerBoard() {
-        let newSize = board.numCols - 1
+        let newSize = board.size - 1
         if newSize > 0 {
-            board = GameBoard(numRows: newSize, numCols: newSize)
+            board = GameBoard(size: newSize)
         }
     }
     
     func createNewLargerBoard() {
-        let newSize = board.numCols + 1
+        let newSize = board.size + 1
         if newSize < 100 {
-            board = GameBoard(numRows: newSize, numCols: newSize)
+            board = GameBoard(size: newSize)
         }
     }
 }

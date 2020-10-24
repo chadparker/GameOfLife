@@ -18,7 +18,7 @@ struct GridView: View {
             ForEach(gameModel.board.rows) { row in
                 HStack {
                     ForEach(row.cells) { cell in
-                        CellView(cell: cell, size: size/CGFloat(gameModel.board.numCols))
+                        CellView(cell: cell, size: size/CGFloat(gameModel.board.size))
                     }
                 }
             }
