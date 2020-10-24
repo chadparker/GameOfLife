@@ -145,8 +145,8 @@ class GameOfLifeModel: ObservableObject {
     var timer: Timer?
     var speed: Double
 
-    init(numRows: Int = 9, numCols: Int = 9, speed: Double = 0.5) {
-        self.board = GameBoard(numRows: numRows, numCols: numCols)
+    init(size: Int = 3, speed: Double = 0.5) {
+        self.board = GameBoard(numRows: size, numCols: size)
         self.speed = speed
 
         board.randomize()
@@ -167,5 +167,23 @@ class GameOfLifeModel: ObservableObject {
         generation += 1
 
         board.calculateNextGeneration()
+    }
+    
+//    func createNewBoard(size: Int) {
+//        board = GameBoard(numRows: size, numCols: size)
+//    }
+    
+    func createNewSmallerBoard() {
+        let newSize = board.numCols - 1
+        if newSize > 0 {
+            board = GameBoard(numRows: newSize, numCols: newSize)
+        }
+    }
+    
+    func createNewLargerBoard() {
+        let newSize = board.numCols + 1
+        if newSize < 100 {
+            board = GameBoard(numRows: newSize, numCols: newSize)
+        }
     }
 }
