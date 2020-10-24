@@ -56,6 +56,27 @@ struct ButtonsView: View {
                         .padding()
                 }
             }
+
+            HStack {
+
+                Button {
+                    gameModel.createNewSmallerBoard()
+                } label: {
+                    Text("LESS")
+                        .font(.callout)
+                        .fontWeight(.heavy)
+                        .padding()
+                }
+
+                Button {
+                    gameModel.createNewLargerBoard()
+                } label: {
+                    Text("MORE")
+                        .font(.callout)
+                        .fontWeight(.heavy)
+                        .padding()
+                }
+            }
         }
         .padding(.top)
     }
