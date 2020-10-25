@@ -177,6 +177,7 @@ class GameOfLifeModel: ObservableObject {
         let newSize = board.size - 1
         if newSize > 0 {
             board = GameBoard(size: newSize)
+            board.randomize()
         }
     }
     
@@ -184,6 +185,7 @@ class GameOfLifeModel: ObservableObject {
         let newSize = board.size + 1
         if newSize < 100 {
             board = GameBoard(size: newSize)
+            board.randomize()
         }
     }
 
