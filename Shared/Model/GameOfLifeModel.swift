@@ -143,7 +143,7 @@ class GameOfLifeModel: ObservableObject {
     var timer: Timer?
     var speed: Double
 
-    init(size: Int = 3, speed: Double = 0.5) {
+    init(size: Int = 10, speed: Double = 0.5) {
         self.board = GameBoard(size: size)
         self.speed = speed
 
