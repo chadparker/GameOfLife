@@ -151,18 +151,20 @@ class GameOfLifeModel: ObservableObject {
     }
 
     func startSimulation() {
-        updateTimer()
         running = true
+        updateTimer()
     }
 
     private func updateTimer() {
-        timer?.invalidate()
-        timer = Timer.scheduledTimer(withTimeInterval: speed, repeats: true, block: runLoop)
+        if running {
+            timer?.invalidate()
+            timer = Timer.scheduledTimer(withTimeInterval: speed, repeats: true, block: runLoop)
+        }
     }
 
     func stopSimulation() {
-        timer?.invalidate()
         running = false
+        timer?.invalidate()
     }
 
     func runLoop(timer: Timer) {
