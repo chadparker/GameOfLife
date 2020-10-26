@@ -143,7 +143,7 @@ class GameOfLifeModel: ObservableObject {
     var timer: Timer?
     var speed: Double
 
-    init(size: Int = 10, speed: Double = 0.5) {
+    init(size: Int = 12, speed: Double = 0.25) {
         self.board = GameBoard(size: size)
         self.speed = speed
 
@@ -183,7 +183,7 @@ class GameOfLifeModel: ObservableObject {
     
     func createNewLargerBoard() {
         let newSize = board.size + 1
-        if newSize < 100 {
+        if newSize <= 25 {
             board = GameBoard(size: newSize)
             board.randomize()
         }
