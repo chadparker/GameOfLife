@@ -1,10 +1,10 @@
 # Game of Life
 
-My approach to *Conway's Game of Life* for CS build week
+*Conway's Game of Life* for CS build week, iOS, SwiftUI
 
 ## Plan
 
-**We need a grid of cells, alive or not.** To make the `Cell`s able to be displayed, I'm storing them in `Row`s, which are easy to iterate over. I'm also keeping a linear list of all cells, to easily loop over all of them. I have a `GameBoard`, which will create and store these lists, which are sized based on inputs of `numRows` and `numCols`.
+**We need a grid of cells, alive or not.** To make the `Cell`s able to be displayed, I'm storing them in `Row`s, which are easy to display with HStack rows in a VStack. I'm also keeping a linear list of all cells, to easily loop over all of them. I have a `GameBoard`, which will create and store these lists, which are sized based on inputs of `numRows` and `numCols`.
 
 **Performant calculation of next generation:** I'd rather not calculate each cell's neighbors on every generation, so I'm thinking I can store a list of references to neighboring cells. Partway through this I'm realizing I don't need to hang on to each cell, but rather just get a count of which neighbors are alive, which gets saved for the calculation of the next generation.
 
