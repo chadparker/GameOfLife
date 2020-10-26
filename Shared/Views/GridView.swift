@@ -14,9 +14,9 @@ struct GridView: View {
     let size: CGFloat
 
     var body: some View {
-        VStack {
+        VStack(spacing: 1) {
             ForEach(gameModel.board.rows) { row in
-                HStack {
+                HStack(spacing: 1) {
                     ForEach(row.cells) { cell in
                         CellView(cell: cell, size: size/CGFloat(gameModel.board.size))
                     }
