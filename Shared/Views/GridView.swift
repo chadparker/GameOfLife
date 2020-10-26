@@ -22,7 +22,7 @@ struct GridView: View {
                     }
                 }
             }
-        }.frame(width: size, height: size)
+        }.frame(width: size-20, height: size-20)
     }
 }
 
