@@ -162,7 +162,7 @@ class GameOfLifeModel: ObservableObject {
         }
     }
 
-    func stopSimulation() {
+    func pauseSimulation() {
         running = false
         timer?.invalidate()
     }
