@@ -15,13 +15,13 @@ struct MainView: View {
         GeometryReader { g in
             VStack {
                 Image("header")
-                    .padding(.vertical, g.size.height/30)
+                    .padding(.vertical, g.size.height/100)
                 GridView(size: g.size.width)
-                ButtonsView()
                 Text("Generation: \(gameModel.generation)")
+                ButtonsView()
                 Spacer()
             }
-            .frame(minWidth: 0, maxWidth: .infinity)
+            .frame(maxWidth: .infinity)
         }
     }
 }
