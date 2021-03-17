@@ -1,6 +1,11 @@
 # Game of Life
 
-*Conway's Game of Life* for CS build week, iOS, SwiftUI
+A delightful iOS version of *Conway's Game of Life*
+
+[a couple screenshots]
+
+I made this app during Computer Science build week at Lambda School. Our instruction was primarily in UIKit, but I decided to develop this app in SwiftUI to get more experience with it.  
+
 
 ## Plan
 
