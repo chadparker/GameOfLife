@@ -15,6 +15,8 @@ I made this app during Computer Science build week at Lambda School. Our instruc
 
 **I was thinking of two GameBoards,** one for the current generation, and one for the next. Which is certainly possible, but it's a copy of a complex data structure that might not be necessary. I'm thinking of an array of booleans that will get applied to the cells after calculation.
 
+`Cell` is a reference type because each cell will stay on screen until the board is reset, and may be stored by reference by multiple objects. [more explanation of `Cell` lifetime]
+
 ## Rules
 
 A cell has eight neighbors (up, down, left, right, and diagonals)
