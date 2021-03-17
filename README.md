@@ -7,11 +7,11 @@ A delightful iOS version of *Conway's Game of Life*
 I made this app during Computer Science build week at Lambda School. Our instruction was primarily in UIKit, but I decided to develop this app in SwiftUI to get more experience with it.  
 
 
-## Plan
+## Planning
 
-**We need a grid of cells, alive or not.** To make the `Cell`s able to be displayed, I'm storing them in `Row`s, which are easy to display with HStack rows in a VStack. I'm also keeping a linear list of all cells, to easily loop over all of them. I have a `GameBoard`, which will create and store these lists, which are sized based on inputs of `numRows` and `numCols`.
+**We need a grid of cells, alive or not.** To make the `Cell`s easily displayed by SwiftUI, I'm storing them in `Row`s, which are easy to display with multiple HStack rows inside of a VStack. I'm also keeping a linear list of all cells (`Cell` is a reference type), to easily loop over all of them. I have a `GameBoard`, which will create and store these lists, which are sized based on inputs of `numRows` and `numCols`.
 
-**Performant calculation of next generation:** I'd rather not calculate each cell's neighbors on every generation, so I'm thinking I can store a list of references to neighboring cells. Partway through this I'm realizing I don't need to hang on to each cell, but rather just get a count of which neighbors are alive, which gets saved for the calculation of the next generation.
+**Performant calculation of next generation:** I'd rather not calculate each cell's neighbors on every generation, so I'm thinking I can store a list of references to neighboring cells. Partway through this I'm realizing I don't need to hang on to each neighboring cell, but rather just get a count of which neighbors are alive, which gets saved for the calculation of the next generation.
 
 **I was thinking of two GameBoards,** one for the current generation, and one for the next. Which is certainly possible, but it's a copy of a complex data structure that might not be necessary. I'm thinking of an array of booleans that will get applied to the cells after calculation.
 
