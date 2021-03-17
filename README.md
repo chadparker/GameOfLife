@@ -2,7 +2,7 @@
 
 A delightful iOS version of *Conway's Game of Life*
 
-[a couple screenshots]
+<img width="300" alt="App screenshot 1" src="https://user-images.githubusercontent.com/438307/111413068-cbf74e80-869a-11eb-805f-e23a8ac67017.png"><img width="300" alt="App screenshot 2" src="https://user-images.githubusercontent.com/438307/111413152-f517df00-869a-11eb-949e-77eeb395fbb0.png">
 
 I made this app during Computer Science build week at Lambda School. Our instruction was primarily in UIKit, but I decided to develop this app in SwiftUI to get more experience with it.  
 
