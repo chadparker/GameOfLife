@@ -27,6 +27,8 @@
 		63DA9B6A2537FB1D00A72E2B /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DA9B682537FB1D00A72E2B /* GridView.swift */; };
 		63DA9B702537FB7700A72E2B /* GameOfLifeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DA9B6F2537FB7700A72E2B /* GameOfLifeModel.swift */; };
 		63DA9B712537FB7700A72E2B /* GameOfLifeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DA9B6F2537FB7700A72E2B /* GameOfLifeModel.swift */; };
+		63EFCCB52602E72600A07994 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EFCCB42602E72600A07994 /* InfoView.swift */; };
+		63EFCCB62602E72600A07994 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EFCCB42602E72600A07994 /* InfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,7 @@
 		63C8B2382539457500441B82 /* Square.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Square.swift; sourceTree = "<group>"; };
 		63DA9B682537FB1D00A72E2B /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 		63DA9B6F2537FB7700A72E2B /* GameOfLifeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOfLifeModel.swift; sourceTree = "<group>"; };
+		63EFCCB42602E72600A07994 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +185,7 @@
 				63DA9B682537FB1D00A72E2B /* GridView.swift */,
 				63B9AF2C25369EF000435054 /* CellView.swift */,
 				63A5023D253FDCA60096E707 /* ButtonsView.swift */,
+				63EFCCB42602E72600A07994 /* InfoView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -367,6 +371,7 @@
 				63DA9B692537FB1D00A72E2B /* GridView.swift in Sources */,
 				63B9AF2D25369EF000435054 /* CellView.swift in Sources */,
 				63A5023E253FDCA60096E707 /* ButtonsView.swift in Sources */,
+				63EFCCB52602E72600A07994 /* InfoView.swift in Sources */,
 				63A50237253E95DB0096E707 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -382,6 +387,7 @@
 				63DA9B6A2537FB1D00A72E2B /* GridView.swift in Sources */,
 				63B9AF2E25369EF000435054 /* CellView.swift in Sources */,
 				63A5023F253FDCA60096E707 /* ButtonsView.swift in Sources */,
+				63EFCCB62602E72600A07994 /* InfoView.swift in Sources */,
 				63A50238253E95DB0096E707 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
