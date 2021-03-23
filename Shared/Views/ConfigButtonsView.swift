@@ -19,7 +19,7 @@ struct ConfigButtonsView: View {
             VStack {
                 HStack(spacing: 0) {
                     Button {
-                        gameModel.createNewSmallerBoard()
+                        gameModel.createNewResizedBoard(delta: -1)
                     } label: {
                         Image(systemName: "minus")
                             .font(Font.system(size: 20, weight: .bold))
@@ -31,7 +31,7 @@ struct ConfigButtonsView: View {
                         .buttonText()
 
                     Button {
-                        gameModel.createNewLargerBoard()
+                        gameModel.createNewResizedBoard(delta: 1)
                     } label: {
                         Image(systemName: "plus")
                             .font(Font.system(size: 20, weight: .bold))

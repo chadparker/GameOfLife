@@ -173,20 +173,12 @@ class GameOfLifeModel: ObservableObject {
         board.calculateNextGeneration()
     }
     
-    func createNewSmallerBoard() {
-        let newSize = board.size - 1
-        if newSize > 0 {
-            board = GameBoard(size: newSize)
-            board.randomize()
-        }
-    }
-    
-    func createNewLargerBoard() {
-        let newSize = board.size + 1
-        if newSize <= 25 {
-            board = GameBoard(size: newSize)
-            board.randomize()
-        }
+    func createNewResizedBoard(delta: Int) {
+        let newSize = board.size + delta
+        guard newSize > 0,
+              newSize < 25 else { return }
+        board = GameBoard(size: newSize)
+        board.randomize()
     }
 
     func speedSlower() {
