@@ -18,8 +18,7 @@ struct ButtonsView: View {
                 // MARK: - Reset
 
                 Button {
-                    #warning("create reset method")
-                    //gameModel.pauseSimulation()
+                    
                 } label: {
                     VStack {
                         Image(systemName: "arrow.counterclockwise")
@@ -53,7 +52,6 @@ struct ButtonsView: View {
                                 .buttonText()
                                 .padding(.bottom)
                         }
-//                        .foregroundColor(gameModel.running ? .accentColor : Color(.systemGray4))
                         .padding(.horizontal)
                     }
                 } else {
@@ -74,16 +72,12 @@ struct ButtonsView: View {
                     }
                 }
 
-                #warning("wrap play/pause in an `if`")
-//
-
                 Spacer()
                 
                 // MARK: - Info
 
                 Button {
-                    #warning("create info view")
-                    //gameModel.pauseSimulation()
+                    
                 } label: {
                     VStack {
                         Image(systemName: "info.circle")
@@ -94,7 +88,6 @@ struct ButtonsView: View {
                             .buttonText()
                             .padding(.bottom)
                     }
-                    //.foregroundColor(gameModel.running ? .accentColor : Color(.systemGray4))
                     .padding(.horizontal)
                 }
             }
