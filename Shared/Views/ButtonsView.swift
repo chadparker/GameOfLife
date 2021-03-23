@@ -135,80 +135,8 @@ struct ButtonsView: View {
                     .padding(.horizontal)
                 }
             }
-
-            HStack {
-
-            // MARK: - Grid size
-
-                VStack {
-
-                    Text("GRID SIZE")
-                        .foregroundColor(Color(.systemGray))
-                        .buttonText()
-
-                    HStack {
-
-                        Button {
-                            gameModel.createNewSmallerBoard()
-                        } label: {
-                            Image(systemName: "minus")
-                                .font(Font.system(size: 20, weight: .bold))
-                                .padding()
-                        }
-
-                        Button {
-                            gameModel.createNewLargerBoard()
-                        } label: {
-                            Image(systemName: "plus")
-                                .font(Font.system(size: 20, weight: .bold))
-                                .padding()
-                        }
-                    }
-                }
-
-                Spacer()
-
-
-                // MARK: - Speed
-
-                VStack {
-
-                    Text("SPEED")
-                        .foregroundColor(Color(.systemGray))
-                        .buttonText()
-
-                    HStack {
-
-                        Button {
-                            gameModel.speedSlower()
-                        } label: {
-                            Image(systemName: "tortoise.fill")
-                                .padding()
-                        }
-
-                        Button {
-                            gameModel.speedFaster()
-                        } label: {
-                            Image(systemName: "hare.fill")
-                                .font(Font.system(size: 20, weight: .bold))
-                                .padding()
-                        }
-                    }
-                }
-            }
         }
         .padding(.top)
-    }
-}
-
-
-// MARK: - Text extensions
-
-extension Text {
-    func buttonText() -> Text {
-        self
-            .font(.callout)
-            .fontWeight(.heavy)
     }
 }
 

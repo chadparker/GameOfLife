@@ -15,6 +15,8 @@
 		632F7EA72536976C00E86DD0 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632F7E7C2536976A00E86DD0 /* MainView.swift */; };
 		632F7EA82536976C00E86DD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 632F7E7D2536976C00E86DD0 /* Assets.xcassets */; };
 		632F7EA92536976C00E86DD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 632F7E7D2536976C00E86DD0 /* Assets.xcassets */; };
+		63663ADC2559E7FE00383759 /* ConfigButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63663ADB2559E7FE00383759 /* ConfigButtonsView.swift */; };
+		63663ADD2559E7FE00383759 /* ConfigButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63663ADB2559E7FE00383759 /* ConfigButtonsView.swift */; };
 		63663AE32559E89900383759 /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63663AE22559E89900383759 /* Modifiers.swift */; };
 		63663AE42559E89900383759 /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63663AE22559E89900383759 /* Modifiers.swift */; };
 		63A50237253E95DB0096E707 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A50236253E95DB0096E707 /* Extensions.swift */; };
@@ -65,6 +67,7 @@
 		632F7E9D2536976C00E86DD0 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		632F7EA12536976C00E86DD0 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		632F7EA32536976C00E86DD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63663ADB2559E7FE00383759 /* ConfigButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigButtonsView.swift; sourceTree = "<group>"; };
 		63663AE22559E89900383759 /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
 		63A50236253E95DB0096E707 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		63A5023D253FDCA60096E707 /* ButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
@@ -187,6 +190,7 @@
 				632F7E7C2536976A00E86DD0 /* MainView.swift */,
 				63DA9B682537FB1D00A72E2B /* GridView.swift */,
 				63B9AF2C25369EF000435054 /* CellView.swift */,
+				63663ADB2559E7FE00383759 /* ConfigButtonsView.swift */,
 				63A5023D253FDCA60096E707 /* ButtonsView.swift */,
 				63EFCCB42602E72600A07994 /* InfoView.swift */,
 			);
@@ -369,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				63C8B2392539457500441B82 /* Square.swift in Sources */,
+				63663ADC2559E7FE00383759 /* ConfigButtonsView.swift in Sources */,
 				63DA9B702537FB7700A72E2B /* GameOfLifeModel.swift in Sources */,
 				632F7EA62536976C00E86DD0 /* MainView.swift in Sources */,
 				63663AE32559E89900383759 /* Modifiers.swift in Sources */,
@@ -386,6 +391,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				63C8B23A2539457500441B82 /* Square.swift in Sources */,
+				63663ADD2559E7FE00383759 /* ConfigButtonsView.swift in Sources */,
 				63DA9B712537FB7700A72E2B /* GameOfLifeModel.swift in Sources */,
 				632F7EA72536976C00E86DD0 /* MainView.swift in Sources */,
 				63663AE42559E89900383759 /* Modifiers.swift in Sources */,

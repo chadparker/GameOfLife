@@ -26,6 +26,7 @@ struct MainView: View {
                         .padding(.trailing, 10)
                 }
                 GridView(size: g.size.width)
+                ConfigButtonsView()
                 ButtonsView()
                 Spacer()
             }
