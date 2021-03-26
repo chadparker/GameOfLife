@@ -37,7 +37,7 @@ class GameBoard {
 
     let size: Int
 
-    init(size: Int = 9) {
+    init(size: Int) {
         self.size = size
         // create cells and rows
         for _ in 0..<size {
@@ -143,7 +143,7 @@ class GameOfLifeModel: ObservableObject {
     var timer: Timer?
     var speed: Double
 
-    init(size: Int = Constants.boardSize.initial, speed: Double = 0.25) {
+    init(size: Int = Constants.boardSize.initial, speed: Double = Constants.speed.initial) {
         self.board = GameBoard(size: size)
         self.speed = speed
 

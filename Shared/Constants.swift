@@ -10,9 +10,12 @@ import Foundation
 struct Constants {
     
     struct boardSize {
-        
         static let min = 5
         static let initial = 20
         static let max = 50
+    }
+    
+    struct speed {
+        static let initial = 0.25
     }
 }
