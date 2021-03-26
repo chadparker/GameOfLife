@@ -10,6 +10,7 @@ import SwiftUI
 struct ButtonsView: View {
 
     @EnvironmentObject var gameModel: GameOfLifeModel
+    @Binding var showingInfo: Bool
 
     var body: some View {
         VStack {
@@ -77,7 +78,7 @@ struct ButtonsView: View {
                 // MARK: - Info
 
                 Button {
-                    
+                    showingInfo.toggle()
                 } label: {
                     VStack {
                         Image(systemName: "info.circle")
@@ -138,6 +139,7 @@ struct ButtonsView: View {
 
 struct ButtonsView_Previews: PreviewProvider {
     static var previews: some View {
-        ButtonsView().environmentObject(GameOfLifeModel())
+        ButtonsView(showingInfo: .constant(false))
+            .environmentObject(GameOfLifeModel())
     }
 }
