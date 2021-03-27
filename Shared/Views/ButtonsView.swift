@@ -33,6 +33,7 @@ struct ButtonsView: View {
                     .foregroundColor(gameModel.running ? .accentColor : Color(.systemGray4))
                     .padding(.horizontal)
                 }
+                .hidden()
 
                 Spacer()
 
