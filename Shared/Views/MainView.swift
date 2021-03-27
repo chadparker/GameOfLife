@@ -18,15 +18,7 @@ struct MainView: View {
                 VStack {
                     Image("header")
                         .padding(.vertical, g.size.height/100)
-                    HStack {
-                        Spacer()
-                        Text("Generation")
-                            .foregroundColor(Color(.systemGray))
-                            .buttonText()
-                        Text("\(gameModel.generation)")
-                            .buttonText()
-                            .padding(.trailing, 10)
-                    }
+                    generationCounter
                     GridView(size: g.size.width)
                     ConfigButtonsView()
                     ButtonsView(showingInfo: $showingInfo)
@@ -36,6 +28,18 @@ struct MainView: View {
             }
             InfoView()
                 .opacity(showingInfo ? 1 : 0)
+        }
+    }
+    
+    var generationCounter: some View {
+        HStack {
+            Spacer()
+            Text("Generation")
+                .foregroundColor(Color(.systemGray))
+                .buttonText()
+            Text("\(gameModel.generation)")
+                .buttonText()
+                .padding(.trailing, 10)
         }
     }
 }
