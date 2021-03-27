@@ -18,7 +18,10 @@ struct MainView: View {
                 VStack {
                     Image("header")
                         .padding(.vertical, g.size.height/100)
-                    generationCounter
+                    HStack {
+                        infoButton
+                        generationCounter
+                    }
                     GridView(size: g.size.width)
                     ConfigButtonsView()
                     ButtonsView(showingInfo: $showingInfo)
@@ -28,6 +31,19 @@ struct MainView: View {
             }
             InfoView()
                 .opacity(showingInfo ? 1 : 0)
+        }
+    }
+    
+    var infoButton: some View {
+        Button {
+            showingInfo.toggle()
+        } label: {
+            HStack(alignment: .center) {
+                Image(systemName: "info.circle")
+                    .font(Font.system(size: 30, weight: .bold))
+                Text("INFO")
+                    .buttonText()
+            }
         }
     }
     

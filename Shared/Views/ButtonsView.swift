@@ -92,6 +92,7 @@ struct ButtonsView: View {
                     }
                     .padding(.horizontal)
                 }
+                .hidden()
             }
             .frame(maxWidth: .infinity)
 
