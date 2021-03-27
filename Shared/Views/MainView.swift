@@ -10,7 +10,7 @@ import SwiftUI
 struct MainView: View {
     
     @EnvironmentObject var gameModel: GameOfLifeModel
-    @State var showingInfo = true
+    @State var showingInfo = false
     
     var body: some View {
         ZStack {
